@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../actions';
+import addIcon from '../icons/addIcon.svg'
 
 class TodoForm extends Component {
 	constructor() {
@@ -31,10 +32,12 @@ class TodoForm extends Component {
 					type="text"
 					name="inputText"
 					value={this.state.inputText}
-					placeholder="Add task"
+					placeholder="Add a new task"
 					onChange={this.handleChange}
 				/>
-				<button onClick={this.handleClick}>Add</button>
+				<button className="btn-icon" onClick={this.handleClick}>
+					<img src={addIcon} alt="add to list" />
+				</button>
 			</form>
 		);
 	}

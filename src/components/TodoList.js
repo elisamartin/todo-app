@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addItem, completeItem, deleteItem } from '../actions';
+import { addItem, completeItem, deleteItem, editItem } from '../actions';
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
@@ -14,6 +14,8 @@ const TodoList = (props) => {
 						id={index}
 						toggle={props.completeItem}
 						delete={props.deleteItem}
+						edit={props.editItem}
+						handleEditClick={props.handleEditClick}
 					/>
 				);
 			})}
@@ -31,7 +33,8 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		addItem: (text) => dispatch(addItem(text)),
 		completeItem: (index) => dispatch(completeItem(index)),
-		deleteItem: (index) => dispatch(deleteItem(index))
+		deleteItem: (index) => dispatch(deleteItem(index)),
+		editItem: (item) => dispatch(editItem(item))
 	};
 };
 

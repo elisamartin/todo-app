@@ -1,4 +1,4 @@
-import { ADD_TODO, COMPLETE_ITEM, DELETE_ITEM } from '../reducers';
+import { ADD_TODO, COMPLETE_ITEM, DELETE_ITEM, EDIT_ITEM } from '../reducers';
 
 export const addItem = (text) => {
 	return {
@@ -18,5 +18,12 @@ export const deleteItem = (index) => {
 	return {
 		type: DELETE_ITEM,
 		payload: index
+	};
+};
+
+export const editItem = (item) => {
+	return {
+		type: EDIT_ITEM,
+		payload: item
 	};
 };
