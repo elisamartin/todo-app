@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import reducer from './reducers';
 import { loadState, saveState } from './localStorage';
+import Context from './Context';
 
 import './App.css';
 
@@ -21,8 +21,8 @@ store.subscribe(() => {
 });
 
 ReactDOM.render(
-	<Provider store={store}>
+	<Context.Provider store={store}>
 		<App />
-	</Provider>,
+	</Context.Provider>,
 	document.getElementById('root')
 );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { editItem } from '../actions';
+import {connect} from '../Connect';
 
 class EditTodoForm extends Component {
 	constructor(props) {

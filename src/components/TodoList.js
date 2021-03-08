@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { addItem, completeItem, deleteItem, editItem } from '../actions';
 import TodoItem from './TodoItem';
+import {connect} from '../Connect';
 
 const TodoList = (props) => {
 	return (
