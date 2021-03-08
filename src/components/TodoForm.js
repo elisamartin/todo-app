@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { addItem } from '../actions';
-import addIcon from '../icons/addIcon.svg'
+import addIcon from '../icons/addIcon.svg';
+import {connect} from '../Connect';
 
 class TodoForm extends Component {
 	constructor() {
